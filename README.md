@@ -29,6 +29,8 @@ git clone https://github.com/timmeinerzhagen/tmeinerzhagen.de.git
 sudo ln -s /etc/nginx/sites-available/tmeinerzhagen.de /etc/nginx/sites-enabled/
 sudo systemctl restart nginx
 
+# Configure Dynamic DNS
+
 # (In progress) Add certificates for HTTPS
 sudo apt-get install certbot python-certbot-nginx
 sudo certbot --nginx
