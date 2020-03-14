@@ -282,13 +282,13 @@ CTA
 /* ==========================================================================
 Team
 ========================================================================== */
-.team img { margin-bottom: 40px; }
+.team img { margin-bottom: 0px; }
 ul.social-buttons { list-style: none; margin: 0; padding: 0; }
 ul.social-buttons li { display: inline-block; margin-right: 10px; }
 ul.social-buttons li:last-child { margin-right: 0; }
-.social-btn { width: 40px; height: 40px; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; -o-border-radius: 50%; background: #242830; display: inline-block; color: #fff; font-size: 17px; line-height: 40px; text-align: center; }
-.social-btn:hover, .social-btn:focus { background: #3dc9b3; color: #fff; }
-.social { margin-top: 25px }
+.social-btn { width: 240px; height: 240px; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 10%; -o-border-radius: 50%; display: inline-block; color: #333; font-size: 160px; line-height: 240px; text-align: center; }
+.social-btn:hover, .social-btn:focus { color: #888; }
+.social { margin-top: 0px }
 /* ==========================================================================
 Contact
 ========================================================================== */
@@ -302,7 +302,7 @@ Contact
 Footer
 ========================================================================== */
 footer a { color: #a1a9b0; }
-footer { background-color: #242830; padding: 40px 0 30px; }
+footer { background-color: #242830;}
 footer p { color: #fff; }
 ul.legals { list-style: none; color: #fff; line-height: 25px; }
 ul.legals li { display: inline-block; }
