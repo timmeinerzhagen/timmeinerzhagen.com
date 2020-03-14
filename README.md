@@ -1,6 +1,6 @@
-# tmeinerzhagen.de
+# timmeinerzhagen.de
 
-Conent and setup for the personal website [tmeinerzhagen.de](http://www.tmeinerzhagen.de).
+Conent and setup for the personal website [timmeinerzhagen.de](http://www.timmeinerzhagen.de).
 
 ## Installation
 ```
@@ -10,23 +10,23 @@ sudo apt install nginx
 
 # Clone repository
 sudo apt install git
-git clone https://github.com/timmeinerzhagen/tmeinerzhagen.de.git
+git clone https://github.com/timmeinerzhagen/timmeinerzhagen.de.git
 
 # Create nginx config
 {
         echo '  server {
         echo '      listen 80;
         echo '      listen [::]:80;
-        echo '      root /home/timclouduser/tmeinerzhagen.de/website;
+        echo '      root /home/timclouduser/timmeinerzhagen.de/website;
         echo '      index index.html index.htm index.nginx-debian.html;
-        echo '      server_name example.com www.example.com;
+        echo '      server_name timmeinerzhagen.de www.timmeinerzhagen.de;
         echo '      location / {
         echo '          try_files $uri $uri/ =404;
         echo '      }
         echo '  }
        
-} >> /etc/nginx/sites-available/tmeinerzhagen.de
-sudo ln -s /etc/nginx/sites-available/tmeinerzhagen.de /etc/nginx/sites-enabled/
+} >> /etc/nginx/sites-available/timmeinerzhagen.de
+sudo ln -s /etc/nginx/sites-available/timmeinerzhagen.de /etc/nginx/sites-enabled/
 sudo systemctl restart nginx
 
 # Configure Dynamic DNS

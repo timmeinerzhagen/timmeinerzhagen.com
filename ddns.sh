@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mydomain="sos-obx.us" # 'tmeinerzhaggen.de'
+mydomain="sos-obx.us" # 'timmeinerzhagen.de'
 myhostname="gateway" # '@'
 gdapikey="api_key:key_secret" # 'xx:xx'
 logdest="local7.info"
