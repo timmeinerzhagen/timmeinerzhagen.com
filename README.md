@@ -1,53 +1,43 @@
-# "Halcyon Days" One Page Website Template
+# tmeinerzhagen.de
 
-"Halcyon Days" is a one page website template made by [Peter Finlan](http://peterfinlan.com/) exclusively for Codrops.
+Conent and setup for the personal website [tmeinerzhagen.de](http://www.tmeinerzhagen.de).
 
-[Download on Codrops](http://tympanus.net/codrops/2014/07/14/freebie-halcyon-days-one-page-website-template/)
+## Installation
+```
+# Install nginx
+sudo apt update
+sudo apt install nginx
 
-[Demo](http://tympanus.net/Freebies/HalcyonDaysTemplate/)
+# Clone repository
+sudo apt install git
+git clone https://github.com/timmeinerzhagen/tmeinerzhagen.de.git
+
+# Create nginx config
+{
+        echo '  server {
+        echo '      listen 80;
+        echo '      listen [::]:80;
+        echo '      root /home/timclouduser/tmeinerzhagen.de;
+        echo '      index index.html index.htm index.nginx-debian.html;
+        echo '      server_name example.com www.example.com;
+        echo '      location / {
+        echo '          try_files $uri $uri/ =404;
+        echo '      }
+        echo '  }
+       
+} >> /etc/nginx/sites-available/tmeinerzhagen.de
+sudo ln -s /etc/nginx/sites-available/tmeinerzhagen.de /etc/nginx/sites-enabled/
+sudo systemctl restart nginx
+
+# (In progress) Add certificates for HTTPS
+sudo apt-get install certbot python-certbot-nginx
+sudo certbot --nginx
+```
+
+## Credit
+The template ["Halcyon Days"](http://tympanus.net/codrops/2014/07/14/freebie-halcyon-days-one-page-website-template/) made by [Peter Finlan](http://peterfinlan.com/) was used in this project.
 
 ## License
-
 Use it freely but please do not republish, distribute or sell "as-is". [Read more about our license.](http://tympanus.net/codrops/licensing/)
-
-## Contributing
-
-I encourage contributions to all of my templates and I will endeavour to review all pull requests submitted.
-
-Before contributing, please see the Contributing Guide (Coming soon).
-
-## Credits 
-
-### Bootstrap
-
-[Bootstrap](http://getbootstrap.com/) by Twitter. Licensed under [MIT](https://github.com/twbs/bootstrap/blob/master/LICENSE)
-
-### FancyBox
-
-[FancyBox](http://fancyapps.com/fancybox/) by fancyApps. Licensed under [CC BY-NC 3.0](http://creativecommons.org/licenses/by-nc/3.0/)
-
-### FlexSlider
-
-[FlexSlider](http://www.woothemes.com/flexslider/) by WooThemes. Licensed under [GNU GENERAL PUBLIC LICENSE](https://github.com/woothemes/FlexSlider/blob/master/LICENSE.md)
-
-### Waypoints
-
-[Waypoints](https://github.com/imakewebthings/waypoints) by Caleb Troughton. Licensed under [MIT](https://github.com/imakewebthings/waypoints/blog/master/licenses.txt)
-
-### Animate.css
-
-[Animate.css](https://daneden.github.io/animate.css/) by Dan Eden
-
-### Font Awesome Icons 
-
-[Font Awesome](http://fortawesome.github.io/Font-Awesome/) by Dave Gandy. Licensed under [MIT](http://opensource.org/licenses/mit-license.html)
-
-## Misc
-
-Follow Pete: [Twitter](https://twitter.com/peterfinlan), [Dribbble](http://www.dribbble.com/peterfinlan), [GitHub](https://github.com/peterfinlan)
-
-Follow Codrops: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www.facebook.com/pages/Codrops/159107397912), [Google+](https://plus.google.com/101095823814290637419), [GitHub](https://github.com/codrops), [Pinterest](http://www.pinterest.com/codrops/)
-
-[© Codrops 2015](http://www.codrops.com)
 
 
