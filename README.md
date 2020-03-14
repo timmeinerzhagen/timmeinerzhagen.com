@@ -1,6 +1,6 @@
 # timmeinerzhagen.de
 
-Conent and setup for the personal website [timmeinerzhagen.de](http://www.timmeinerzhagen.de).
+Conent and setup for the personal website [timmeinerzhagen.de](https://www.timmeinerzhagen.de).
 
 ## Installation
 ```
