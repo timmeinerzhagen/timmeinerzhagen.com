@@ -17,7 +17,7 @@ git clone https://github.com/timmeinerzhagen/tmeinerzhagen.de.git
         echo '  server {
         echo '      listen 80;
         echo '      listen [::]:80;
-        echo '      root /home/timclouduser/tmeinerzhagen.de;
+        echo '      root /home/timclouduser/tmeinerzhagen.de/website;
         echo '      index index.html index.htm index.nginx-debian.html;
         echo '      server_name example.com www.example.com;
         echo '      location / {
