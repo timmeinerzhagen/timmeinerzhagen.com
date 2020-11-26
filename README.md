@@ -2,39 +2,19 @@
 
 Conent and setup for the personal website [timmeinerzhagen.de](https://www.timmeinerzhagen.de).
 
-## Installation
-```
-# Install nginx
-sudo apt update
-sudo apt install nginx
+## Deployment
+Run Pipeline to deploy to the Google Comupte Platform (GCP) service Google App Engine (GAE).
 
-# Clone repository
-sudo apt install git
-git clone https://github.com/timmeinerzhagen/timmeinerzhagen.de.git
-
-# Create nginx config
-{
-        echo '  server {
-        echo '      listen 80;
-        echo '      listen [::]:80;
-        echo '      root /home/timclouduser/timmeinerzhagen.de/website;
-        echo '      index index.html index.htm index.nginx-debian.html;
-        echo '      server_name timmeinerzhagen.de www.timmeinerzhagen.de;
-        echo '      location / {
-        echo '          try_files $uri $uri/ =404;
-        echo '      }
-        echo '  }
-       
-} >> /etc/nginx/sites-available/timmeinerzhagen.de
-sudo ln -s /etc/nginx/sites-available/timmeinerzhagen.de /etc/nginx/sites-enabled/
-sudo systemctl restart nginx
-
-# Configure Dynamic DNS
-
-# (In progress) Add certificates for HTTPS
-sudo apt-get install certbot python-certbot-nginx
-sudo certbot --nginx
-```
+## GCP
+1. Create New Project
+2. Create new Service account with priveleges "App Engine Admin"
+3. Generate a key for the service account and place it in the Github environment with the name GCLOUD_KEYFILE
+4. Enable App Engine Admin API
+5. 
+'''
+gcloud app create --region=europe-west
+'''
+6. Run Workflow
 
 ## Credit
 The template ["Halcyon Days"](http://tympanus.net/codrops/2014/07/14/freebie-halcyon-days-one-page-website-template/) made by [Peter Finlan](http://peterfinlan.com/) was used in this project.

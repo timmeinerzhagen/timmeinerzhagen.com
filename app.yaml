@@ -1,0 +1,26 @@
+runtime: python37
+
+handlers:
+- url: /
+  static_files: static/index.html
+  upload: static/index.html
+
+- url: /index.html
+  static_files: static/index.html
+  upload: static/index.html
+
+- url: /impressum.html
+  static_files: static/impressum.html
+  upload: static/impressum.html
+
+- url: /css
+  static_dir: static/css
+
+- url: /js
+  static_dir: static/js
+  
+- url: /img
+  static_dir: static/img
+
+- url: /.*
+  script: auto
