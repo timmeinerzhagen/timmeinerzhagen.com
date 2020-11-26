@@ -4,23 +4,29 @@ handlers:
 - url: /
   static_files: static/index.html
   upload: static/index.html
+  secure: always
 
 - url: /index.html
   static_files: static/index.html
   upload: static/index.html
+  secure: always
 
 - url: /impressum.html
   static_files: static/impressum.html
   upload: static/impressum.html
+  secure: always
 
 - url: /css
   static_dir: static/css
+  secure: always
 
 - url: /js
   static_dir: static/js
+  secure: always
   
 - url: /img
   static_dir: static/img
+  secure: always
 
 - url: /.*
   script: auto
