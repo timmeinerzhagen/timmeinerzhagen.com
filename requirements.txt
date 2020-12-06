@@ -14,3 +14,4 @@ starlette==0.12.9
 uvicorn==0.11.7
 websockets==8.1
 wrapt==1.11.2
+requests==2.7.0
