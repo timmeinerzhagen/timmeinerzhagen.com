@@ -12,7 +12,7 @@ handlers:
   upload: static/index.html
   secure: always
 
-- url: /impressum.html
+- url: /impressum
   static_files: static/impressum.html
   upload: static/impressum.html
   secure: always
