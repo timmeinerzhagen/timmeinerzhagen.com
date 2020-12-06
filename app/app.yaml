@@ -3,30 +3,30 @@ entrypoint: gunicorn main:app -w 4 -k uvicorn.workers.UvicornWorker
 
 handlers:
 - url: /
-  static_files: static/index.html
-  upload: static/index.html
+  static_files: frontend/index.html
+  upload: frontend/index.html
   secure: always
 
 - url: /index.html
-  static_files: static/index.html
-  upload: static/index.html
+  static_files: frontend/index.html
+  upload: frontend/index.html
   secure: always
 
 - url: /impressum
-  static_files: static/impressum.html
-  upload: static/impressum.html
+  static_files: frontend/impressum.html
+  upload: frontend/impressum.html
   secure: always
 
 - url: /css
-  static_dir: static/css
+  static_dir: frontend/css
   secure: always
 
 - url: /js
-  static_dir: static/js
+  static_dir: frontend/js
   secure: always
   
 - url: /img
-  static_dir: static/img
+  static_dir: frontend/img
   secure: always
 
 - url: /.*
