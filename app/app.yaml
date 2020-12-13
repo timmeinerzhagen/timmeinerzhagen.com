@@ -17,6 +17,11 @@ handlers:
   upload: frontend/impressum.html
   secure: always
 
+- url: /impressum.html
+  static_files: frontend/impressum.html
+  upload: frontend/impressum.html
+  secure: always
+
 - url: /css
   static_dir: frontend/css
   secure: always
