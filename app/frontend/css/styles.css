@@ -19,7 +19,9 @@ body {
 /* Main Content */
 .hero { 
 	background: url('../img/hero-bg.jpg') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; 
-	height: auto; width: 100%; padding: 65px 0 300px 0;  position: absolute;
+	height: 100%; width: 100%; position: absolute;
+	display: flex; align-items: center;
+	bottom: 4em;
 }
 .hero h1 { font-weight: 500; font-size: 40px; letter-spacing: 12px; margin: 10px; line-height: 1.1; margin: .67em 0; }
 .hero p { letter-spacing: 1px; }
@@ -29,7 +31,6 @@ body {
 	margin-left: -15px;
     margin-right: -15px;
 }
-.inner { padding-top: 170px; }
 .text-center { text-align: center; }
 .col-md-6 { width: 35%; }
 .col-md-8 { width: 66.66666667%; }
@@ -60,7 +61,7 @@ ul.social-buttons li { display: inline-block; margin-right: 10px; }
 /* Footer */
 p { margin-block-start: 0em; margin-block-end: 0em; }
 a { color: #a1a9b0; text-decoration: none;}
-footer { background-color: #242830; position: fixed; bottom: 0; width: 100%; }
+footer { background-color: #242830; position: fixed; bottom: 0; width: 100%; height: 4em;}
 .footer { margin-left: 15%; }
 .legals { text-align: left; line-height: 25px; margin-top: 1em; margin-bottom: 1em; }
 .credit { text-align: right; margin-top: 1em; margin-bottom: 1em; line-height: 25px; color: #fff; }
