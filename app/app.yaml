@@ -36,5 +36,9 @@ handlers:
   static_dir: frontend/img
   secure: always
 
+- url: /fonts
+  static_dir: frontend/fonts
+  secure: always
+
 - url: /.*
   script: auto
