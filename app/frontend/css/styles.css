@@ -18,11 +18,12 @@ body {
 .delay-02s { animation-delay: 2s; -webkit-animation-delay: 2s; }
 /* Main Content */
 .hero { 
-	background: url('../img/hero-bg.jpg') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; 
 	height: 100%; width: 100%; position: absolute;
 	display: flex; align-items: center;
 	bottom: 4em;
 }
+.hero-webp { background: url('../img/hero-bg.webp') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.hero-nowebp { background: url('../img/hero-bg.jpg') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 .hero h1 { font-weight: 500; font-size: 60px; letter-spacing: 12px; margin: 10px; line-height: 1.1; margin: .67em 0; }
 .hero p { letter-spacing: 1px; font-size: 30px;}
 /* Layout */
