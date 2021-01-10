@@ -46,7 +46,7 @@ handlers:
 
 - url: /articles/(.*)
   static_files: frontend/pages/\1.html
-  upload: frontend/pages/
+  upload: frontend/pages/(.*)
   secure: always
 
 - url: /.*
