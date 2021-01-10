@@ -8,17 +8,24 @@ handlers:
   static_files: frontend/index.html
   upload: frontend/index.html
   secure: always
-
 - url: /index.html
   static_files: frontend/index.html
   upload: frontend/index.html
+  secure: always
+
+- url: /about.html
+  static_files: frontend/about.html
+  upload: frontend/about.html
+  secure: always
+- url: /about
+  static_files: frontend/about.html
+  upload: frontend/about.html
   secure: always
 
 - url: /impressum
   static_files: frontend/impressum.html
   upload: frontend/impressum.html
   secure: always
-
 - url: /impressum.html
   static_files: frontend/impressum.html
   upload: frontend/impressum.html
@@ -27,17 +34,19 @@ handlers:
 - url: /css
   static_dir: frontend/css
   secure: always
-
 - url: /js
   static_dir: frontend/js
   secure: always
-  
 - url: /img
   static_dir: frontend/img
   secure: always
-
 - url: /fonts
   static_dir: frontend/fonts
+  secure: always
+
+- url: /articles/(.*)
+  static_files: frontend/pages/\1.html
+  upload: frontend/pages/
   secure: always
 
 - url: /.*
