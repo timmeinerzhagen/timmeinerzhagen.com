@@ -11,76 +11,10 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <link href="css/varela_round.css" rel="stylesheet">
     <link href="fonts/font-awesome.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     <style>
-      /** CSS Style **/
       /* Main */
-      body { 
-        margin: 0; line-height: 1.42857143;
-        font-family: 'Varela Round', sans-serif; font-style: normal; font-weight: 400; font-size: 14px;
-        box-sizing: border-box;
-      }
-      #top { background-color: #35383D; }
-      * { box-sizing: border-box; }
-      /* Animations */
-      .animated { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
-      .fadeInDown{ -webkit-animation: 3s ease 0s normal forwards 1 fadeInDown; animation: 3s ease 0s normal forwards 1 fadeInDown; -webkit-animation-name: fadeInDown; animation-name: fadeInDown; }
-      @keyframes fadeInDown { 0% { opacity:0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); } 80% { opacity:1; -webkit-transform: translateY(0px); -ms-transform: translateY(0px); transform: translateY(0px); } 100% { opacity:1; } }
-      @-webkit-keyframes fadeInDown { 0% { opacity:0; -webkit-transform: translateY(-20px); transform: translateY(-20px); } 80% { opacity:1; -webkit-transform: translateY(0px); transform: translateY(0px); } 100% { opacity:1; } }
-      .fadeInUp { -webkit-animation-name: fadeInUp; animation-name: fadeInUp; }
-      @keyframes fadeInUp { 0% { opacity:0; -webkit-transform: translateY(20px); -ms-transform: translateY(20px); transform: translateY(20px); } 80% { opacity:1; -webkit-transform: translateY(0px); -ms-transform: translateY(0px); transform: translateY(0px); } 100% { opacity:1; } }
-      @-webkit-keyframes fadeInUp { 0% { opacity:0; -webkit-transform: translateY(20px); transform: translateY(20px); } 80% { opacity:1; -webkit-transform: translateY(0px); transform: translateY(0px); } 100% { opacity:1; } }
-      .delay-01s { animation-delay: 1s; -webkit-animation-delay: 1s; }
-      .delay-02s { animation-delay: 2s; -webkit-animation-delay: 2s; }
-      /* Main Content */
-      .hero { 
-        height: 100%; width: 100%; position: absolute;
-        display: flex; align-items: center;
-        bottom: 4em;
-      }
-      .hero-webp { background: url('img/hero-bg.webp') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
-      .hero-nowebp { background: url('img/hero-bg.jpg') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
-      .hero h1 { font-weight: 500; font-size: 60px; letter-spacing: 12px; margin: 10px; line-height: 1.1; margin: .67em 0; }
-      .hero p { letter-spacing: 1px; font-size: 30px;}
-      /* Layout */
-      .row {
-        align-content: center;
-        margin-left: -15px;
-          margin-right: -15px;
-      }
-      .text-center { text-align: center; }
-      .col-md-6 { width: 35%; }
-      .col-md-8 { width: 66.66666667%; }
-      .col-md-12 { width: 100%; }
-      .col-md-6, .col-md-12 {
-        position: relative; float: left;
-        min-height: 1px;
-        padding-left: 15px; padding-right: 15px;
-      }
-      .container {
-        width: 100%;
-        margin-right: auto; margin-left: auto;
-          padding-left: 15px; padding-right: 15px;
-      }
-      .container:before, .container:after { content: " "; display: table; }
-      /* Social Buttons */
-      ul, ol { margin: 1em 0; text-align: center; }
-      .social-buttons { margin-block-start: 0em; margin-block-end: 0em; margin-inline-start: 0px; margin-inline-end: 0px; padding-inline-start: 0px; }
-      ul.social-buttons li { display: inline-block; margin-right: 10px; }
-      .social-btn { 
-        width: 150px; height: 150px; 
-        border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 10%; -o-border-radius: 50%; 
-        display: inline-block; color: #333; font-size: 100px; line-height: 200px;
-        -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s; 
-      }
-      .social-btn:hover, .social-btn:focus { color: #888; }
 
-      /* Footer */
-      p { margin-block-start: 0em; margin-block-end: 0em; }
-      a { color: #a1a9b0; text-decoration: none;}
-      footer { background-color: #242830; position: fixed; bottom: 0; width: 100%; height: 4em;}
-      .footer { margin-left: 15%; }
-      .legals { text-align: left; line-height: 25px; margin-top: 1em; margin-bottom: 1em; }
-      .credit { text-align: right; margin-top: 1em; margin-bottom: 1em; line-height: 25px; color: #fff; }
     </style>
     <script type="text/javascript">
        /** Check for Webp support **/
@@ -102,7 +36,7 @@
         */
         function applyWebpIfApplicable(){
             if(checkWebpSupport())
-                document.getElementsByClassName("hero")[0].classList.add("hero-webp")
+                console.log("Webp"); //document.getElementsByClassName("hero")[0].classList.add("hero-webp")
             else 
                 document.getElementsByClassName("hero")[0].classList.add("hero-nowebp")
         }
@@ -113,30 +47,46 @@
     </script>
   </head>
   <body id="top">
-    <header id="home">
-      <section class="hero" id="hero">
+    <div id="home">
+      <section class="hero hero-main" id="hero">
         <div class="container">
           <div class="text-center">
             <h1 class="animated fadeInDown">Tim Meinerzhagen</h1>
             <p class="animated fadeInUp delay-01s">Programmer | Cloud Engineer @ Bayer</p>
           </div>
-          <div class="text-center">
-            <ul class="social-buttons ">
-              <li><a href="https://github.com/timmeinerzhagen" class="social-btn animated fadeInUp delay-02s"><i class="fa fa-github"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/tim-meinerzhagen/" class="social-btn animated fadeInUp delay-02s"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="mailto:tim@meinerzhagen.me" class="social-btn animated fadeInUp delay-02s"><i class="fa fa-envelope"></i></a></li>
-            </ul>
-          </div>
+          <ul class="text-center social-buttons">
+            <li><a href="https://github.com/timmeinerzhagen" class="social-btn social-btn-large animated fadeInUp delay-02s"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/tim-meinerzhagen/" class="social-btn social-btn-large animated fadeInUp delay-02s"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="mailto:tim@meinerzhagen.me" class="social-btn social-btn-large animated fadeInUp delay-02s"><i class="fa fa-envelope"></i></a></li>
+          </ul>
+          <br>
+          <ul class="text-center article-showcase animated fadeInUp delay-02s">
+            <li><a href="articles/timmeinerzhagen.com"><div class="article-showcase-item">
+                <div class="article-title">timmeinerzhagen.com</div>
+                <div class="article-description">How this personal website was created, including Google Cloud infrastructure, content, and previous iterations</div>
+              </div></a></li>
+              <li><a href="about"><div class="article-showcase-item">
+                <div class="article-title">About me</div>
+                <div class="article-description">Who this page is about, including a short introduction, career, previous projects and how you are able to contact me</div>
+              </div></a></li>
+          </ul>
         </div>
       </section>
-    </header>
+    </div>
     <footer>
       <div class="container footer">
         <div class="row">
-          <div class="col-md-6 legals">
-            <a href="impressum">Impressum</a></li>
+          <ul class="col-md-5 links">
+            <li><a href="/" class="link">Start</a></li>
+            <li><a href="about" class="link">About</a></li>
+            <li><a href="impressum" class="link">Impressum</a></li>
           </div>
-          <div class="col-md-6 text-center credit">
+          <ul class="col-md-4 socials">
+            <li><a href="https://github.com/timmeinerzhagen" class="social-btn"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/tim-meinerzhagen/" class="social-btn"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="mailto:tim@meinerzhagen.me" class="social-btn"><i class="fa fa-envelope"></i></a></li>
+          </ul>
+          <div class="col-md-3 text-center credit">
             <p>Copyright © 2021 Tim Meinerzhagen</p>
           </div>
         </div>
