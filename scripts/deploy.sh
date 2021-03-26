@@ -1,5 +1,5 @@
 cd app
-gcloud auth activate-service-account --key-file=../keyfile-timmeinerzhagen-de.json
-gcloud config set project timmeinerzhagen-de
+gcloud auth activate-service-account --key-file=../keyfile-dungeonfulldive-com.json
+gcloud config set project dungeonfulldive-com
 gcloud app deploy
 cd ..

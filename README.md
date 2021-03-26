@@ -1,4 +1,4 @@
-# timmeinerzhagen.de
+# dungeonfulldive.com
 
 Conent and setup for the personal website [timmeinerzhagen.de](https://www.timmeinerzhagen.de).
 

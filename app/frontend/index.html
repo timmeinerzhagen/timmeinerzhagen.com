@@ -67,7 +67,7 @@
         display: flex;
         bottom: 4em;
       }
-      .hero-main { align-items: center; }
+      .hero-main { align-items: flex-end; }
       .hero-webp { background: url('../img/hero-bg.webp') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
       .hero-nowebp { background: url('../img/hero-bg.jpg') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
       .hero h1 { font-weight: 500; font-size: 60px; letter-spacing: 12px; margin: 10px; line-height: 1.1; margin: .67em 0; }
@@ -92,7 +92,7 @@
         min-height: 1px;
         padding-right: 15px;
       }
-      .container {
+      .container {  
         width: 100%;
         margin-right: auto; margin-left: auto;
           padding-left: 15px; padding-right: 15px;
@@ -101,8 +101,8 @@
       /* Social Buttons */
       ul, ol { margin: 1em 0; text-align: center; }
       .social-buttons, .socials, .article-showcase { margin-block-start: 0em; margin-block-end: 0em; margin-inline-start: 0px; margin-inline-end: 0px; padding-inline-start: 0px; }
-      ul.social-buttons li, ul.socials li, ul.article-showcase li { display: inline-block; margin-right: 10px; }
-      .social-btn { 
+      ul.social-buttons li, ul.socials li, ul.article-showcase li { display: inline-block; margin-right: 200px; }
+      .social-btn {
         width: 20px; height: 20px; 
         border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 10%; -o-border-radius: 50%; 
         display: inline-block; color: #a1a9b0; font-size: 20px; line-height: 20px;
@@ -147,44 +147,18 @@
     <div id="home">
       <section class="hero hero-main" id="hero">
         <div class="container">
-          <div class="text-center">
-            <h1 class="animated fadeInDown">Tim Meinerzhagen</h1>
-            <p class="animated fadeInUp delay-01s">Programmer | Cloud Engineer</p>
-          </div>
-          <ul class="text-center social-buttons">
-            <li><a href="https://github.com/timmeinerzhagen" alt="GitHub" class="social-btn social-btn-large animated fadeInUp delay-02s"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/tim-meinerzhagen/" alt="LinkedIn" class="social-btn social-btn-large animated fadeInUp delay-02s"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="mailto:tim@meinerzhagen.me" alt="Mail" class="social-btn social-btn-large animated fadeInUp delay-02s"><i class="fa fa-envelope"></i></a></li>
-          </ul>
-          <br>
-          <ul class="text-center article-showcase animated fadeInUp delay-02s">
-            <li><a href="articles/timmeinerzhagen.com"><div class="article-showcase-item">
-                <div class="article-title">timmeinerzhagen.com</div>
-                <div class="article-description">How this personal website was created, including Google Cloud infrastructure, content, and previous iterations</div>
-              </div></a></li>
-              <li><a href="about"><div class="article-showcase-item">
-                <div class="article-title">About me</div>
-                <div class="article-description">Who this page is about, including a short introduction, career, previous projects and how you are able to contact me</div>
-              </div></a></li>
-          </ul>
+            <ul class="text-center social-buttons" style="float: right">
+              <li><a href="https://www.kickstarter.com/projects/dfdstudios/dungeon-full-dive-make-your-dnd-worlds-real" alt="Kickstarter" class="social-btn social-btn-large animated fadeInUp delay-01s"><img src="img/kickstarter.png" width="300px" height="300px"></img></a></li>
+              <li><a href="https://www.reddit.com/r/DungeonFullDive/" alt="Reddit" class="social-btn social-btn-large animated fadeInUp delay-01s"><img src="img/reddit.png" width="300px" height="300px"></img></a></li>
+            </ul>
         </div>
       </section>
     </div>
     <footer>
       <div class="container footer">
         <div class="row">
-          <ul class="col-md-5 links">
-            <li><a href="/" class="link">Overview</a></li>
-            <li><a href="/about" class="link">About</a></li>
-            <li><a href="/impressum" class="link">Impressum</a></li>
-          </div>
-          <ul class="col-md-4 socials">
-            <li><a href="https://github.com/timmeinerzhagen" alt="GitHub" class="social-btn"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/tim-meinerzhagen/" alt="LinkedIn" class="social-btn"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="mailto:tim@meinerzhagen.me" alt="Mail" class="social-btn"><i class="fa fa-envelope"></i></a></li>
-          </ul>
-          <div class="col-md-3 text-center credit">
-            <p>Copyright © 2021 Tim Meinerzhagen</p>
+          <div class="col-md-3 credit">
+            <p>Copyright © 2021 TxK Gaming</p>
           </div>
         </div>
       </div>
