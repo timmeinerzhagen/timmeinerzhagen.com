@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"">
     <meta name="description" content="Dungeon Full Dive: Make your DnD worlds real! DFD allows you and your friends to dive INTO your DnD Worlds by using your PCs or even VR-Headsets.">
     <title>Dungeon Full Dive</title>
     <link rel=preload href="css/varela_round.css" as="style">
@@ -48,7 +48,7 @@
         font-family: 'Varela Round', sans-serif; font-style: normal; font-weight: 400; font-size: 16px;
         box-sizing: border-box;
       }
-      #top { background-color: #35383D; }
+      #top { background-color: #35383D; overflow-x: hidden;}
       * { box-sizing: border-box; }
       /* Animations */
       .animated { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
@@ -62,14 +62,10 @@
       .delay-02s { animation-delay: 2s; -webkit-animation-delay: 2s; }
       /* Main Content */
       .hero { 
-        background: url('../img/hero-bg.webp') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
-        height: 100%; width: 100%; position: absolute;
+        height: 100%; width: 100%;;
         display: flex;
         bottom: 4em;
       }
-      .hero-main { align-items: flex-end; }
-      .hero-webp { background: url('../img/hero-bg.webp') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
-      .hero-nowebp { background: url('../img/hero-bg.jpg') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
       .hero h1 { font-weight: 500; font-size: 60px; letter-spacing: 12px; margin: 10px; line-height: 1.1; margin: .67em 0; }
       .hero h2 { font-weight: 200; font-size: 20px; letter-spacing: 12px; margin: 10px; line-height: 1.1; margin: .67em 0; }
       .hero p { letter-spacing: 1px; font-size: 30px;}
@@ -93,15 +89,17 @@
         padding-right: 15px;
       }
       .container {  
-        width: 100%;
-        margin-right: auto; margin-left: auto;
-          padding-left: 15px; padding-right: 15px;
+        width: fit-content;
+        padding-left: 15px; padding-right: 15px;
+      }
+      .title-box {  
+        margin: 50px;
       }
       .container:before, .container:after { content: " "; display: table; }
       /* Social Buttons */
-      ul, ol { margin: 1em 0; text-align: center; }
+      ul, ol { margin: 1em 0; }
       .social-buttons, .socials, .article-showcase { margin-block-start: 0em; margin-block-end: 0em; margin-inline-start: 0px; margin-inline-end: 0px; padding-inline-start: 0px; }
-      ul.social-buttons li, ul.socials li, ul.article-showcase li { display: inline-block; margin-right: 200px; }
+      ul.social-buttons li, ul.socials li, ul.article-showcase li { display: inline-block; margin-left: 25px; margin-right: 25px; }
       .social-btn {
         width: 20px; height: 20px; 
         border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 10%; -o-border-radius: 50%; 
@@ -114,18 +112,6 @@
       }
       .social-btn:hover, .social-btn:focus { color: #888; }
 
-      /* Content*/
-      .content {  background-color: #FFF; top: 4em; margin-bottom: 4em; margin-left: 25%; padding: 20px; bottom: 0px; height: auto; }
-      .content h1 { font-weight: 300; font-size: 40px; letter-spacing: 3px; margin: 10px; line-height: 1.1; margin: .67em 0; }
-      .content p { margin-bottom: 14px;  }
-      .article {  position: relative; background-color: #FFF; margin-bottom: 4em; padding: 20px; bottom: 0px; }
-
-      .article-showcase { margin-top: 20px;}
-      .article-showcase li { width: 20em; height: 9em; background-color: #333; border-radius: 5px;}
-      .article-showcase-item { width: 18em; height: 7em;  margin: .67em 0; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 10%; -o-border-radius: 50%;  margin: 12px}
-      .article-title { font-weight: 200; font-size: 19px; letter-spacing: 2px; }
-      .article-description { line-height: 1.2em; font-size: 16px; text-align: left; color: #FFF; padding-top: 10px; font-weight: 100; letter-spacing: 1px}
-
       /* Footer */
       p { margin-block-start: 0em; margin-block-end: 0em; }
       a { color: #a1a9b0; text-decoration: none;}
@@ -135,20 +121,48 @@
       .link { display: inline-block }
       ul.links li { display: inline-block; margin-right: 10px; }
       .socials { text-align: right; line-height: 25px; margin-top: 1em; margin-bottom: 1em; }
-      .credit { text-align: right; margin-top: 1em; margin-bottom: 1em; line-height: 25px; color: #a1a9b0; }
+      .credit { width: max-content; text-align: right; margin-top: 1em; margin-bottom: 1em; line-height: 25px; color: #a1a9b0; }
+
+      .background-container {
+        display: inline-block;
+        overflow-y: hidden;
+        width: 100%;
+      }
+      .background-img {
+          pointer-events: none;
+          position: relative;
+          min-width: 100%;
+          z-index: -1;
+      }
     </style>
 
   </head>
   <body id="top">
     <div id="home">
-      <section class="hero hero-main" id="hero">
-        <div class="container">
-            <ul class="text-center social-buttons" style="float: right">
-              <li><a href="https://www.kickstarter.com/projects/dfdstudios/dungeon-full-dive-make-your-dnd-worlds-real" alt="Kickstarter" class="social-btn social-btn-large animated fadeInUp delay-01s"><img src="img/kickstarter.png" width="300px" height="300px"></img></a></li>
-              <li><a href="https://www.reddit.com/r/DungeonFullDive/" alt="Reddit" class="social-btn social-btn-large animated fadeInUp delay-01s"><img src="img/reddit.png" width="300px" height="300px"></img></a></li>
-            </ul>
+      <div class="hero hero-main" id="hero">
+        <div class="start" style="display: flex; width: 100vw; height: 100vh">
+            <div class="background-container">
+              <picture>
+                <source class="background-img"srcset="img/hero-bg.webp" type="image/webp">
+                <img class="background-img" src="img/hero-bg.png" alt="Background">
+              </picture>
+            </div>
+            <div class="title-box container" style="position: absolute; transform: translate(0%, 10%);">
+              <div class="animated fadeInUp" style="background-color: #242830; border-radius: 20px; text-align: center; padding: 40px; margin-bottom: 20px;">
+                <img width="100%" src="img/DFD.png">
+              </div>
+              <div class="animated fadeInUp delay-01s" style="background-color: #242830; border-radius: 20px; text-align: center">
+                <ul class="social-buttons">
+                  <li><a href="https://www.kickstarter.com/projects/dfdstudios/dungeon-full-dive-make-your-dnd-worlds-real" alt="Kickstarter" class="social-btn social-btn-large"><img src="img/kickstarter.png" width="100px" height="100px"></img></a></li>
+                  <li><a href="https://www.reddit.com/r/DungeonFullDive/" alt="Reddit" class="social-btn social-btn-large"><img src="img/reddit.png" width="100px" height="100px"></img></a></li>
+                </ul>
+              </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </div>
+    <div style="display: flex; background-color: #242830; margin-bottom: 4em;">
+      <iframe style="width: 100vw; height: 56vw;"src="https://www.youtube.com/embed/D0_-MevAT8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <footer>
       <div class="container footer">
