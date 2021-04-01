@@ -5,31 +5,13 @@ automatic_scaling:
 
 handlers:
 - url: /
-  static_files: frontend/index.html
-  upload: frontend/index.html
-  secure: always
-- url: /index.html
-  static_files: frontend/index.html
-  upload: frontend/index.html
+  static_files: frontend/Startseite.html
+  upload: frontend/Startseite.html
   secure: always
 
-- url: /css
-  static_dir: frontend/css
-  secure: always
-- url: /js
-  static_dir: frontend/js
-  secure: always
-- url: /img
-  static_dir: frontend/img
-  secure: always
-- url: /fonts
-  static_dir: frontend/fonts
-  secure: always
+- url: /images
+  static_dir: frontend/images
+- url: /(.*\.(css|html|js|txt))$
+  static_files: frontend/\1
+  upload: frontend/.*\.(css|html|js|txt)$
 
-- url: /robots.txt
-  static_files: frontend/robots.txt
-  upload: frontend/robots.txt
-  secure: always
-
-- url: /.*
-  script: auto
