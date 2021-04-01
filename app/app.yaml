@@ -5,8 +5,8 @@ automatic_scaling:
 
 handlers:
 - url: /
-  static_files: frontend/Startseite.html
-  upload: frontend/Startseite.html
+  static_files: frontend/Home.html
+  upload: frontend/Home.html
   secure: always
 
 - url: /images
