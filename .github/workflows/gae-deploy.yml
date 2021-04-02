@@ -1,0 +1,28 @@
+
+name: "Deploy to Google App Engine"
+
+on:
+  push:
+
+jobs:
+  deploy:
+    name: Preview or Deploy 
+    runs-on: ubuntu-latest
+    environment: Google Cloud Platform
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - uses: google-github-actions/setup-gcloud@v0.2.0
+      with:
+        service_account_key: ${{ secrets.GCLOUD_KEYFILE }}
+        project_id: ${{ secrets.GCLOUD_PROJECT }}
+    
+    - name: Deploy
+      run: gcloud app deploy --quiet
+      if: ${{ github.ref == 'refs/heads/master' }}
+
+    - name: Preview
+      run: gcloud app deploy --quiet --no-promote
+      if: ${{ github.ref != 'refs/heads/master' }}
