@@ -49,5 +49,10 @@ handlers:
   upload: frontend/pages/(.*)
   secure: always
 
+- url: /robots.txt
+  static_files: frontend/robots.txt
+  upload: frontend/robots.txt
+  secure: always
+
 - url: /.*
   script: auto
