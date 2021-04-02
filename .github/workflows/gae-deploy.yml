@@ -22,7 +22,9 @@ jobs:
     - name: Deploy
       run: gcloud app deploy --quiet
       if: ${{ github.ref == 'refs/heads/master' }}
+      working-directory: ./app
 
     - name: Preview
       run: gcloud app deploy --quiet --no-promote
       if: ${{ github.ref != 'refs/heads/master' }}
+      working-directory: ./app
