@@ -4,6 +4,9 @@ name: "Deploy to Google App Engine"
 on:
   push:
 
+env:
+  GCLOUD_PROJECT: dungeonfulldive-com
+
 jobs:
   deploy:
     name: Preview or Deploy 
@@ -17,7 +20,7 @@ jobs:
     - uses: google-github-actions/setup-gcloud@v0.2.0
       with:
         service_account_key: ${{ secrets.GCLOUD_KEYFILE }}
-        project_id: ${{ secrets.GCLOUD_PROJECT }}
+        project_id: ${{ env.GCLOUD_PROJECT }}
     
     - name: Deploy
       run: gcloud app deploy --quiet
