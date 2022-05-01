@@ -1,0 +1,22 @@
+<section class="container list">
+    <ul class="portfolio-list">
+      {{ range first 4 (sort .Paginator.Pages "Weight" "desc")  }}
+      <a href="{{ .Params.externalLink | default .RelPermalink }}" title="{{ .Title }}">
+        <div class="portfolio-item">            
+                
+                <li class="portfolio-body">        
+                    <small class="portfolio-title">
+                        {{ .Title }} 
+                    </small>
+                    <small class="porfolio-summary">{{ .Params.Description }}</small>
+                    <div class="portfolio-tags">
+                        {{ range .Params.Tags }}
+                        <small class="portfolio-tag">{{ . }}</small>
+                        {{ end }}
+                    </div>
+                </li>
+        </div>
+      </a>
+      {{ end }}
+    </ul>
+</section>
