@@ -13,7 +13,7 @@ Website content generated via Hugo utilizing the [`hugo-coder`](https://github.c
 
 ## Development
 
-- Install Go 1.13+
+- Install Go 1.18+
 - Clone the repository including submodules
 - Install dependencies with `go install`
 - Create local preview server with `hugo serve`
