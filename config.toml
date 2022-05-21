@@ -6,6 +6,7 @@ paginate = 20
 pygmentsstyle = "bw"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
+relativeURLs = true
 
 [params]
   author = "Tim Jonas Meinerzhagen"
@@ -17,7 +18,6 @@ pygmentscodefencesguesssyntax = true
   colorScheme = "dark"
   hideColorSchemeToggle = true
   maxSeeAlsoItems = 5
-  relativeURLs = true
 
   customSCSS = ["list.scss"]
 
