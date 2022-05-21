@@ -1,4 +1,4 @@
-app/config/config.json
+public/
+resources/
 
-keyfile-test-timmeinerzhagen-de.json
-keyfile-timmeinerzhagen-de.json
+_old/

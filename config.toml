@@ -1,0 +1,49 @@
+baseURL = "https://timmeinerzhagen.com/"
+languageCode = "en-us"
+title = "Tim Jonas Meinerzhagen"
+theme = "hugo-coder"
+paginate = 20
+pygmentsstyle = "bw"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+[params]
+  author = "Tim Jonas Meinerzhagen"
+  info = "Developer | Cloud Engineer"
+  keywords = "devops,devsecops,cloud,portfolio,personal"
+  avatarURL = "images/avatar.jpg"
+  dateFormat = "January 2, 2006"
+  since = 2022
+  colorScheme = "dark"
+  hideColorSchemeToggle = true
+  maxSeeAlsoItems = 5
+
+  customSCSS = ["list.scss"]
+
+[taxonomies]
+  tag = "tags"
+
+# Socials
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-2x fa-github"
+  weight = 1
+  url = "https://github.com/timmeinerzhagen/"
+
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa fa-2x fa-linkedin"
+  weight = 4
+  url = "https://www.linkedin.com/in/tim-meinerzhagen"
+
+[[params.social]]
+  name = "Mail"
+  icon = "fa fa-2x fa-envelope"
+  weight = 4
+  url = "mailto:tim@meinerzhagen.me"
+
+# Menu
+[[menu.main]]
+  name = "Impressum"
+  weight = 3
+  url = "impressum/"

@@ -1,8 +1,0 @@
-{
-    "cf_api_url": "https://api.cloudflare.com/client/v4",
-    "cf_api_key": "",
-    "zone_id": "",
-    "record_id": "",
-    "record_name": ""
-}
-    
