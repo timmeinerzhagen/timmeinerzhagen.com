@@ -1,3 +1,4 @@
+<!-- markdownlint-disable-next-line -->
 <div align="center">
   <h1 align="center">timmeinerzhagen.com</h1>
   <h3 align="center">Personal website, utilized as landing page, overview, <br>as well as general link distribution</h3>
@@ -24,11 +25,12 @@ When adding changes to a pull request, the automation will run and create a prev
 
 The url will have a form as follows:
 
-```
+```yml
 https://timmeinerzhagen.com/preview/${GITHUB_ACTIONS_JOB_RUN_ID}/
 ```
 
 ## Credits
+
 - Uses [`luizdepra/hugo-coder`](https://github.com/luizdepra/hugo-coder)
 - Animations based on [`sharadcodes/hugo-theme-serial-programmer`](https://github.com/sharadcodes/hugo-theme-serial-programmer)
 - Hosted via GitHub Pages

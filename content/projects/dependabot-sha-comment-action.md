@@ -21,7 +21,7 @@ One major issue of Actions is versioning, which is based on normal git tags. The
 
 Instead of pinning to tags it is [encouraged to pin to commit SHAs instead](https://securitylab.github.com/research/github-actions-preventing-pwn-requests/). Dependabot can thankfully already update only using commit SHAs if you want that. The only issue is the lack of readability, which is entailed by the long randomized string that is a string. This tool is meant to make that easier by introducing and maintaining a simple comment for every pinned Action, that displays the version that corresponds to the given commit SHA.
 
-```
+```yml
 - uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f # v2.3.4
 ```
 
