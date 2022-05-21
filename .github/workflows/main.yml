@@ -30,3 +30,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           destination_dir: ${{ github.ref == 'refs/heads/main' && './' || format('./preview/{0}', github.run_id) }}
+          cname: timmeinerzhagen.com
