@@ -31,3 +31,7 @@ jobs:
           publish_dir: ./public
           destination_dir: ${{ github.ref == 'refs/heads/main' && './' || format('./preview/{0}', github.run_id) }}
           cname: timmeinerzhagen.com
+          
+      - run: echo "https://timmeinerzhagen.com$PREVIEW"
+        env:
+          PREVIEW: ${{ github.ref != 'refs/heads/main' && format('/preview/{0}/', github.run_id) || '' }}
