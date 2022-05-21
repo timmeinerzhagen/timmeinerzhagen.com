@@ -10,8 +10,9 @@ relativeURLs = true
 
 [params]
   author = "Tim Jonas Meinerzhagen"
-  info = "Developer | Cloud Engineer"
-  keywords = "devops,devsecops,cloud,portfolio,personal"
+  info = "Developer | Cloud Engineer • Serverless • Cloud Native | DevSecOps"
+  description = "Tim Jonas Meinerzhagen is a developer and cloud engineer with a focus on DevSecOps and Automation. Currently employed at Bayer embracing Security and Cloud practices."
+  keywords = "devops,devsecops,cloud,portfolio,personal,developer,sofware,engineer,github,programming,hugo,go,docker,aws,cicd,automation,gcp,azure,lambda,serverless"
   avatarURL = "images/avatar.jpg"
   dateFormat = "January 2, 2006"
   since = 2022
