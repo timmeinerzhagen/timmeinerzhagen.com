@@ -17,6 +17,7 @@ pygmentscodefencesguesssyntax = true
   colorScheme = "dark"
   hideColorSchemeToggle = true
   maxSeeAlsoItems = 5
+  relativeURLs = true
 
   customSCSS = ["list.scss"]
 
