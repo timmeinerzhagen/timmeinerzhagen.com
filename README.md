@@ -3,7 +3,7 @@
   <h1 align="center">timmeinerzhagen.com</h1>
   <h3 align="center">Personal website, utilized as landing page, overview, <br>as well as general link distribution</h3>
 
-  [![Deploy](https://github.com/timmeinerzhagen/timmeinerzhagen.com/actions/workflows/main.yml/badge.svg)](https://github.com/timmeinerzhagen/timmeinerzhagen.com/actions/workflows/main.yml)
+  [![Deploy](https://github.com/timmeinerzhagen/timmeinerzhagen.com/actions/workflows/deploy.yml/badge.svg)](https://github.com/timmeinerzhagen/timmeinerzhagen.com/actions/workflows/deploy.yml)
   ![website](https://img.shields.io/badge/website-available-green)
 
 </div>
